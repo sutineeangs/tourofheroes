@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+
+</nav>
+
+<h1>My First Attribute Directive</h1>
+<!--<p myHighlight highlightColor="yellow">Highlighted in yellow</p>
+<p myHighlight [highlightColor]="'orange'">Highlight me!</p>
+<p myHighlight [highlightColor]="color">Highlight me with color var.!</p>-->
+
+<input type="radio" name="colors" (click)="color='lightgreen'">Green
+<input type="radio" name="colors" (click)="color='yellow'">Yellow
+<input type="radio" name="colors" (click)="color='cyan'">Cyan
+
+<p [myHighlight]="color" defaultColor="violet">Highlight me! with default</p>
+<p [myHighlight]="color" >Highlight me! without default</p>
+
+
+<router-outlet></router-outlet>
